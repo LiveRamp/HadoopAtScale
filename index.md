@@ -16,7 +16,7 @@ This article will walk through a number of the common data-processing problems H
 - **Identifying and monitoring**: How to both reactively and proactively identify bad application patterns
 - **Fixes**: How can we re-engineer applications to not cause these problems
 
-A key refrain in this post will be, once you identify a usage pattern which is causing performance problems across your environment, _set up monitoring to make it easy to identify in the future_. Problems which make things 5% slower are rarely RCA’d (if they are even identified); only once the environment is so degraded that SLAs are missed will action be taken.  But 5% performance losses across a large environment is a significant cost driver.
+A key refrain in these articles will be, once you identify a usage pattern which is causing performance problems across your environment, _set up monitoring to make it easy to identify in the future_. Problems which make things 5% slower are rarely RCA’d (if they are even identified); only once the environment is so degraded that SLAs are missed will action be taken.  But 5% performance losses across a large environment is a significant cost driver.
 
 The initial articles in this repository focus on problems encountered in LiveRamp's specific environment.  Specifically, this means
 
@@ -30,4 +30,18 @@ This repository is intended to be a living document; contributions from outside 
 
 ## Topics
 
-[HDFS scaling: small files, or too many files](small_files.md)
+- [Small files (or too many files) on HDFS](small_files.md)
+
+- [Large inner-join task output](large_inner_join_task_output.md)
+
+- [Pathological shuffle load](pathological_shuffle_load.md)
+
+- [Poor balancing](poor_hdfs_balancing.md)
+
+- [ResourceManager slow scheduling](resourcemanager_slow_scheduling.md)
+
+- [Identifying bad hardware](bad_hardware.md)
+
+- [Worker node monitoring](node_monitoring.md)
+
+- [Network parameter tuning](network_parameters.md)

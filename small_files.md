@@ -1,4 +1,4 @@
-# Problem: small files, or too many files
+# Problem: Small Files
 
 ## Why
 
@@ -108,7 +108,7 @@ The downside to larger blocks is slow tasks.  Jobs can only parallelize to the c
 
 ![alt text](images/blocks_multi.png)
 
-This still breaks down if your input is a bunch of single-block files.  You can fix this though, by taking advantage of Hadoop’s CombineFileInputFormat to read multiple files per task:
+This still breaks down if your input is a bunch of single-block files.  You can fix this though, by taking advantage of Hadoop’s [CombineFileInputFormat](https://hadoop.apache.org/docs/r2.7.4/api/org/apache/hadoop/mapred/lib/CombineFileInputFormat.html) to read multiple files per task:
 
 ![alt text](images/blocks_combine.png)
 
@@ -129,7 +129,7 @@ Different jobs have different expansion factors, but the general approach here i
 
 ```
 
-The really extreme solution we have implemented at LiveRamp is to actually index into a block, maintaining a separate metadata file with logical data boundaries.  This allows tasks to write multiple “blocks” without incurring extra NameNode operations -- because the NameNode doesn’t know they exist.  These constructs, which we call “Virtual Partitions”, is out of the scope of this blog post though.
+The really extreme solution we have implemented at LiveRamp is to actually index into a block, maintaining a separate metadata file with logical data boundaries.  This allows tasks to write multiple “blocks” without incurring extra NameNode operations -- because the NameNode doesn’t know they exist.  These constructs, which we call “Virtual Partitions”, is out of the scope of this article though.
 
 -----
 Ben Podgursky ([GitHub](https://github.com/bpodgursky/))
