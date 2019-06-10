@@ -131,3 +131,7 @@ Different jobs have different expansion factors, but the general approach here i
 
 The really extreme solution we have implemented at LiveRamp is to actually index into a block, maintaining a separate metadata file with logical data boundaries.  This allows tasks to write multiple “blocks” without incurring extra NameNode operations -- because the NameNode doesn’t know they exist.  These constructs, which we call “Virtual Partitions”, is out of the scope of this blog post though.
 
+-----
+Ben Podgursky
+
+![](https://s.gravatar.com/avatar/3a8d5632b6f9b74095e7867412f0a808?s=80&r=x)
