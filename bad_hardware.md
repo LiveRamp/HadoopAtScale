@@ -1,4 +1,4 @@
-#Bad Hardware
+# Bad Hardware
 
 Identifying and fixing bad hardware sounds like it should be the easy part of data processing (just replace it!), but at scale, is challenging.
 
@@ -6,11 +6,11 @@ Hadoop does a decent job of blacklisting nodes or disks which have completely fa
 
 Just because jobs eventually succeed doesn’t mean everything is fine.  In an ideal world, a job with 100 tasks will launch every task at once.  However, if 1% of tasks fail randomly on the first attempt, we double the job’s expected runtime.
 
-##Symptoms
+## Symptoms
 
 Symptoms of bad hardware run the gamut from “everything is failing” to “this job is kinda slow”.  Outright failures are obvious.  More insidious signs are when a large fraction of jobs quickly reach 99% done, but hang on one or two remaining tasks.
 
-##Why
+## Why
 
 
 There’s no magic fix to bad hardware.  Sometimes drives just perform really poorly before they die.  Sometimes the RAID controller just sucks.  Sometimes the fans don’t work.  Sometimes the air conditioner is broken and one rack of workers is running hot.
