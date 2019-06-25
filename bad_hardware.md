@@ -44,7 +44,7 @@ Unfortunately, this is a crude metric.  It’s very difficult to generically sep
 
 The advantage here is, even if my application runs 1,000 times an hour and is failing repeatedly with NullPointerExceptions, it barely moves the needle.  We only get alerted if a lot of different types of applications are failing at the same time.
 
-##Fixes
+## Fixes
 
 Unfortunately, fixing bad hardware is far outside the scope of this article.  Suffice to say, we don’t like doing it, so we’re [moving to GCP](https://liveramp.com/engineering/migrating-a-big-data-environment-to-the-cloud-part-1/).
 
