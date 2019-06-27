@@ -43,7 +43,7 @@ Luckily, HDFS has a tool to fix this -- the Balancer.  The HDFS Balancer is a to
 While the Balancer did not work for us at scale out of the box, with some tuning we got our HDFS balance problems under control.  I’ll describe how we figured out our balancer wasn’t really working, and what we changed to get it working quickly enough.
 
 
-Symptoms and Monitoring
+## Symptoms and Monitoring
 
 
 The symptoms of bad balancing are straightforward -- tasks fail because disks are full; DataNodes exclude directories for writes because the disks are full.  
