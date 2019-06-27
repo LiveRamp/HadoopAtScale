@@ -88,7 +88,7 @@ On the other hand, if your concern isn’t the rapid file creation, but instead 
 This tells us we have 1.4mm directories, 6.5mm files, and 183TB of data in the /data/team1/tmp tree.  Whether that is a reasonable amount of data is a business-level question.  But what we can say is that files average 28,149,892 bytes each.  This isn’t catastrophic, but it’s a bit small-- if this nameservice had an excess of files, we’d ask this team to improve their task batching (described more below).
 
 
-##Fixing
+## Fixing
 
 So, what tools do we have to reduce our file count?  One key thing to note here is, we can never produce fewer files than we have tasks.  Fundamentally, two mappers or reduces can never write to the same HDFS file, so to consolidate output files, we also have to consolidate input files.
 
