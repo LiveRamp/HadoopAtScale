@@ -2,7 +2,7 @@
   
 Preface:  We expect that in the future (or maybe even now), [YARN Federation](https://issues.apache.org/jira/browse/YARN-5597) will address this problem.  We have not been in a position to test out this feature, but we would love to hear your experiences with federated ResourceManagers.
 
-##Why
+## Why
 
 The ResourceManager is usually not the bottleneck of a Hadoop cluster, but as a single-threaded process, the [FairScheduler](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/FairScheduler.html) is only able to allocate free NodeManager resources at a finite rate.
 
