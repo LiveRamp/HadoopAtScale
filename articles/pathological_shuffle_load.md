@@ -38,7 +38,7 @@ sda               0.10   476.60  143.50   27.20  3131.20  4030.40    41.95     3
 As bad as this is for your jobs, it can get even worse if your HDFS DataNodes share a disk with the NodeManagers.  DataNodes check disk health on a regular cadence, and as part of this process list all files on the data volume; if this process times out, the DataNode indicates to the NameNode that the stored blocks are lost and need to be replicated.  This, in turn, leads to a burst of missing blocks and HDFS re-replication, which even further strains the worker disks.
 
 
-Symptoms
+## Symptoms
 
 Unfortunately, the symptoms of this problem often line up with the symptoms of related but different problems.  Global task failure rates may be elevated:
 
@@ -50,7 +50,7 @@ Missing blocks will often spike with severe disk problems:
 
 (not pictured -- in this case, we actually could rule out disk problems as the source of missing blocks, because blocks are only missing on one of our four nameservices.  If entire volumes were locked, we would expect all nameservices to be missing blocks).
 
-##Identifying and monitoring
+## Identifying and monitoring
 
 Like usual, there are two main approaches to debugging this issue: reactive and proactive.
 
@@ -139,7 +139,7 @@ Fetched programmatically, these correspond to:
 
 At LiveRamp we track these counters for every job and alert if MAP_OUTPUT_MATERIALIZED_BYTES/TOTAL_LAUNCHED_MAPS is over 10GB; this is the rough threshold where we start seeing issues on our HDDs.
 
-##Fixes
+## Fixes
 
 
 The simple fix without an infrastructure change here is straightforward; reduce the data written from each map task.  The implementation here is the exact opposite of the fix for the small files problem earlier -- have more tasks which read less data each.
