@@ -30,18 +30,18 @@ This repository is intended to be a living document; contributions from outside 
 
 ## Topics
 
-- [Small files (or too many files) on HDFS](small_files.md)
+- [Small files (or too many files) on HDFS](articles/small_files.md)
 
-- [Large inner-join task output](large_inner_join_task_output.md)
+- [Large inner-join task output](articles/large_inner_join_task_output.md)
 
-- [Pathological shuffle load](pathological_shuffle_load.md)
+- [Pathological shuffle load](articles/pathological_shuffle_load.md)
 
-- [Poor balancing](poor_hdfs_balancing.md)
+- [Poor balancing](articles/poor_hdfs_balancing.md)
 
-- [ResourceManager slow scheduling](resourcemanager_slow_scheduling.md)
+- [ResourceManager slow scheduling](articles/resourcemanager_slow_scheduling.md)
 
-- [Identifying bad hardware](bad_hardware.md)
+- [Identifying bad hardware](articles/bad_hardware.md)
 
-- [Worker node monitoring](node_monitoring.md)
+- [Worker node monitoring](articles/node_monitoring.md)
 
-- [Network parameter tuning](network_parameters.md)
+- [Network parameter tuning](articles/network_parameters.md)
