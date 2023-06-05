@@ -1,0 +1,12 @@
+# BEGIN TERRAFORM MANAGED BLOCK
+"apiVersion": "backstage.io/v1alpha1"
+"kind": "Location"
+"metadata":
+  "annotations":
+    "github.com/project-slug": "LiveRamp/HadoopAtScale"
+  "description": "Identifying, monitoring, and fixing scaling bottlenecks when running
+    Hadoop at scale"
+  "name": "HadoopAtScale"
+  "tags": []
+"spec": {}
+# END TERRAFORM MANAGED BLOCK  
